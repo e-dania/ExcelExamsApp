@@ -30,4 +30,9 @@ def main():
     while True:
         answer = input("Do you need a personalized study plan? (yes/no) ")
         if answer == "yes":
+         study_plan()
+            break
+        elif answer == "no":
+            print("Good luck in your examinations!")
+            break
 
