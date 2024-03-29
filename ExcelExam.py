@@ -23,3 +23,11 @@ def study_plan():
     print("2. Practice time management skills.")
     print("3. Take additional practice exams.")
     print("4. Access your e-resource here and curate your study plan! https://www.khanacademy.org/")
+def main():
+    welcome()
+    create_profile()
+    assessment()
+    while True:
+        answer = input("Do you need a personalized study plan? (yes/no) ")
+        if answer == "yes":
+
