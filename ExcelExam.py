@@ -17,4 +17,9 @@ def assessment():
         print("Average, you might need to put in a bit more effort.")
     else:
         print("Don't worry, you can improve your score with practice!")
-
+def study_plan():
+    print("Here's your personalized study plan:")
+    print("1. Review weak areas and practice problems.")
+    print("2. Practice time management skills.")
+    print("3. Take additional practice exams.")
+    print("4. Access your e-resource here and curate your study plan! https://www.khanacademy.org/")
