@@ -35,4 +35,8 @@ def main():
         elif answer == "no":
             print("Good luck in your examinations!")
             break
+        else:
+            print("Invalid input. Please answer 'yes' or 'no'.")
 
+if _name_ == "_main_":
+    main()
