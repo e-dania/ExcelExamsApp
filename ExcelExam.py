@@ -6,7 +6,8 @@ def create_profile():
     email = input("Enter your email address: ")
     exam = input("Enter the exam you're preparing for: ")
     print(f"Welcome, {name}! You're preparing for {exam}.")
-# assessment menu    
+# assessment menu
+#score rubric
 def assessment():
     score = float(input("Enter your exam score: "))
     if score >= 90:
