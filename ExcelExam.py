@@ -10,19 +10,21 @@ def create_profile():
 # assessment menu
 #score rubric
 def assessment():
-    try:
-        score = float(input("Enter your exam score: "))
-        print("\n")
-        if score >= 90:
-            print("Great, you're doing excellent!")
-        elif score >= 70:
-            print("Good, you're on the right track!")
-        elif score >= 50:
-            print("Average, you might need to put in a bit more effort.")
-        else:
-            print("Don't worry, you can improve your score with practice!")
-    except ValueError:
-        print("Invalid input. Please enter a number.")
+    while True:
+        try:
+            score = float(input("Enter your exam score: "))
+            print("\n")
+            if score >= 90:
+                print("Great, you're doing excellent!")
+            elif score >= 70:
+                print("Good, you're on the right track!")
+            elif score >= 50:
+                print("Average, you might need to put in a bit more effort.")
+            else:
+                print("Don't worry, you can improve your score with practice!")
+            break
+        except ValueError:
+            print("🚨 Invalid input. Please enter a number.")
         
 def study_plan():
     print("\nHere's your personalized study plan:")
@@ -40,7 +42,7 @@ def main():
             study_plan()
             break
         elif answer == "no":
-            print("Good luck in your examinations!")
+            print("🚀  Good luck in your examinations!")
             break
         else:
             print("Invalid input. Please answer 'yes' or 'no'.")
