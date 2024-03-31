@@ -3,24 +3,29 @@ def welcome():
     print("Welcome to ExcelExam!")
     print("We will help you assess your strengths and weaknesses and provide a personalized study plan.")
 def create_profile():
-    name = input("Enter your name: ")
+    name = input("\nEnter your name: ")
     email = input("Enter your email address: ")
     exam = input("Enter the exam you're preparing for: ")
-    print(f"Welcome, {name}! You're preparing for {exam}.")
+    print(f"\nWelcome, {name}! You're preparing for {exam}.")
 # assessment menu
 #score rubric
 def assessment():
-    score = float(input("Enter your exam score: "))
-    if score >= 90:
-        print("Great, you're doing excellent!")
-    elif score >= 70:
-        print("Good, you're on the right track!")
-    elif score >= 50:
-        print("Average, you might need to put in a bit more effort.")
-    else:
-        print("Don't worry, you can improve your score with practice!")
+    try:
+        score = float(input("Enter your exam score: "))
+        print("\n")
+        if score >= 90:
+            print("Great, you're doing excellent!")
+        elif score >= 70:
+            print("Good, you're on the right track!")
+        elif score >= 50:
+            print("Average, you might need to put in a bit more effort.")
+        else:
+            print("Don't worry, you can improve your score with practice!")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        
 def study_plan():
-    print("Here's your personalized study plan:")
+    print("\nHere's your personalized study plan:")
     print("1. Review weak areas and practice problems.")
     print("2. Practice time management skills.")
     print("3. Take additional practice exams.")
@@ -30,9 +35,9 @@ def main():
     create_profile()
     assessment()
     while True:
-        answer = input("Do you need a personalized study plan? (yes/no) ")
+        answer = input("\nDo you need a personalized study plan? (yes/no) ")
         if answer == "yes":
-         study_plan()
+            study_plan()
             break
         elif answer == "no":
             print("Good luck in your examinations!")
@@ -40,5 +45,5 @@ def main():
         else:
             print("Invalid input. Please answer 'yes' or 'no'.")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
