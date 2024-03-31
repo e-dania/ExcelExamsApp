@@ -22,30 +22,40 @@ def assessment():
                 print("Average, you might need to put in a bit more effort.")
             else:
                 print("Don't worry, you can improve your score with practice!")
-            break
+            return score
         except ValueError:
             print("🚨 Invalid input. Please enter a number.")
         
-def study_plan():
-    print("\nHere's your personalized study plan:")
-    print("1. Review weak areas and practice problems.")
-    print("2. Practice time management skills.")
-    print("3. Take additional practice exams.")
-    print("4. Access your e-resource here and curate your study plan! https://www.khanacademy.org/")
+def study_plan(score, plans):
+    for grade, plan in plans.items():
+        if score >= grade:
+            print("\nHere's your personalized study plan:")
+            for step in plan:
+                print(step)
+            break
+
 def main():
     welcome()
     create_profile()
-    assessment()
+    score = assessment()
+    plans = {
+        90: ["Continue your current study habits.", "Explore advanced topics."],
+        70: ["Review weak areas and practice problems.", "Practice time management skills."],
+        50: ["Review weak areas and practice problems.", "Practice time management skills.", "Take additional practice exams."],
+        0: ["Review weak areas and practice problems.", "Practice time management skills.", "Take additional practice exams.", "Consider seeking help from a tutor or study group."]
+    }
+    
     while True:
         answer = input("\nDo you need a personalized study plan? (yes/no) ")
         if answer == "yes":
-            study_plan()
+            study_plan(score, plans);
             break
         elif answer == "no":
             print("🚀  Good luck in your examinations!")
             break
         else:
             print("Invalid input. Please answer 'yes' or 'no'.")
+    
 
 if __name__ == "__main__":
     main()
