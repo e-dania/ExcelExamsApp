@@ -41,8 +41,8 @@ def main():
     plans = {
         90: ["Continue your current study habits.", "Explore advanced topics."],
         70: ["Review weak areas and practice problems.", "Practice time management skills."],
-        50: ["Review weak areas and practice problems.", "Practice time management skills.", "Take additional practice exams."],
-        0: ["Review weak areas and practice problems.", "Practice time management skills.", "Take additional practice exams.", "Consider seeking help from a tutor or study group."]
+        50: ["Review weak areas and practice problems.", "Practice time management skills.", "Take additional practice exams.", "Consider using study platforms like Khan Academy or Coursera."],
+        0: ["Review weak areas and practice problems.", "Practice time management skills.", "Take additional practice exams.", "Consider seeking help from a tutor or study group.", "Consider using study platforms like Khan Academy or Coursera."]
     }
     
     while True:
